@@ -29,6 +29,7 @@ module "container_definition" {
   }]
 }
 ```
+
 ## Requirements
 
 | Name | Version |
@@ -36,17 +37,21 @@ module "container_definition" {
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.9 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | >= 2.0 |
+
 ## Providers
 
 No providers.
+
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_container_definition"></a> [container\_definition](#module\_container\_definition) | cloudposse/ecs-container-definition/aws | 0.58.2 |
+
 ## Resources
 
 No resources.
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -95,6 +100,7 @@ No resources.
 | <a name="input_user"></a> [user](#input\_user) | The user to run as inside the container. Can be any of these formats: user, user:group, uid, uid:gid, user:gid, uid:group. The default (null) will use the container's configured `USER` directive or root if not set. | `string` | `null` | no |
 | <a name="input_volumes_from"></a> [volumes\_from](#input\_volumes\_from) | A list of VolumesFrom maps which contain "sourceContainer" (name of the container that has the volumes to mount) and "readOnly" (whether the container can write to the volume) | <pre>list(object({<br>    sourceContainer = string<br>    readOnly        = bool<br>  }))</pre> | `[]` | no |
 | <a name="input_working_directory"></a> [working\_directory](#input\_working\_directory) | The working directory to run commands inside the container | `string` | `null` | no |
+
 ## Outputs
 
 | Name | Description |
@@ -105,6 +111,7 @@ No resources.
 | <a name="output_sensitive_json_map_encoded"></a> [sensitive\_json\_map\_encoded](#output\_sensitive\_json\_map\_encoded) | JSON string encoded container definitions for use with other terraform resources such as aws\_ecs\_task\_definition (sensitive). |
 | <a name="output_sensitive_json_map_encoded_list"></a> [sensitive\_json\_map\_encoded\_list](#output\_sensitive\_json\_map\_encoded\_list) | JSON string encoded list of container definitions for use with other terraform resources such as aws\_ecs\_task\_definition (sensitive). |
 | <a name="output_sensitive_json_map_object"></a> [sensitive\_json\_map\_object](#output\_sensitive\_json\_map\_object) | JSON map encoded container definition (sensitive). |
+
 ## Breaking Changes
 
 Please consult [BREAKING\_CHANGES.md](BREAKING\_CHANGES.md) for more information about version
